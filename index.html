@@ -1,0 +1,78 @@
+ 
+<html>
+    <head>
+      <title>Thumbs Up or Down</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body>
+    <div class="container">
+    
+      <center>
+        <h3 class="btn btn-info heading">THUMBS UP OR DOWN
+          <br>
+          <span>&#129304;</span>
+          <span>&#9996;</span>
+          <span>&#128078;</span>
+          <span>&#128077;</span>
+          <span>&#128076;</span>
+          <span>&#9995;</span>
+        </h3>
+        <br><br>
+  
+        <p style="font-size: 22px;">
+          <b style="color: black">Take a picture of your chosen hand gesture!!</b>
+          <br>
+          <b style="color: black">The model is trained on the following gestures!!</b>
+          <br>
+          <span>&#9996;</span>
+          <span>&#128077;</span>
+          <span>&#128076;</span>
+          <br>
+          <b style="color: rgb(198, 39, 219)">Thumbs up</b>
+          <br>
+          <b style="color: rgb(27, 139, 214)">Ok</b>
+          <br>
+          <b style="color: rgb(135, 11, 236)">The V</b>
+          <br>
+        </p>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <label>Webcam View - </label>
+          <div id="camera"></div>
+          <br><br>
+          <button onclick="take_snapshot();" class="btn btn-info">Capture Image</button>
+        </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <button onclick="take_snapshot();" class="btn btn-info">Prediction 1 - </button>
+          <p class="emotion name" id="result_emotion_name"></p>
+        
+  
+        </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Snapshot - </label>
+          <div id="result"></div>
+          <br><br>
+          <button onclick="check();" class="btn btn-info">Predict Gesture</button>
+  
+        </div>
+  
+      </center>
+  
+    </div>
+  
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
+  
